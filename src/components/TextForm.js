@@ -40,7 +40,7 @@ export default function TextForm(props) {
   return (
     <div className='container mt-3'>
         <h1>Enter text to Analyze</h1>
-        <textarea class="form-control my-3" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handletextchange}></textarea>
+        <textarea className="form-control my-3" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handletextchange}></textarea>
         <button className='btn btn-primary mx-1' onClick={toUpper}>Change to Uppercase</button>
         <button className='btn btn-primary mx-1' onClick={toLower}>Change to Lowercase</button>
         <button className='btn btn-success mx-1' onClick={clearText}>Clear Text</button>

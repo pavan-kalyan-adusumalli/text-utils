@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import About from "./components/About";
-import  {BrowserRouter as Router, Routes, Route, BrowserRouter} from "react-router-dom";
+import Alert from "./components/Alert";
+// import About from "./components/About";
+// import  {BrowserRouter as Router, Routes, Route, BrowserRouter} from "react-router-dom";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 	const [alert, setAlert] = useState(null);
 
 	function handleThemeChange() {
+		console.log('hai')
 		if(mode === 'light')
 		{
 			setMode("dark")
@@ -36,16 +38,17 @@ function App() {
 
 	return (
 		<>
-			{/*<Alert alert={alert} />
-			<TextForm showAlert={showAlert} /> */}
+			<Navbar mode={mode} themeChange={handleThemeChange} />
+			<Alert alert={alert} />
+			<TextForm showAlert={showAlert} />
 
-			<BrowserRouter>
+			{/*<BrowserRouter>
 			<Navbar mode={mode} themechange={handleThemeChange} />
 				<Routes>
 					<Route path="/aboutus" element={<About />} />
 					<Route path="/" element = {<TextForm showAlert={showAlert} />} />
 				</Routes>
-			</BrowserRouter>
+			</BrowserRouter>*/}
 		</>
   );
 }
